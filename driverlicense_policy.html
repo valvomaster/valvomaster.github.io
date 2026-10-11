@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>นโยบายความเป็นส่วนตัว — สอบใบขับขี่</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --surface: #FFFFFF;
+    --surface-alt: #E8F0E9;
+    --text: #1C221D;
+    --text-soft: #5C6B5E;
+    --rule: #DCE5DD;
+    --accent: #2E6B3E;
+    --accent-soft: #E3F0E6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12160F;
+      --surface: #1A2018;
+      --surface-alt: #222B20;
+      --text: #ECF1EA;
+      --text-soft: #A6B8A8;
+      --rule: #2C3A2A;
+      --accent: #6FCF87;
+      --accent-soft: #22301F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12160F;
+    --surface: #1A2018;
+    --surface-alt: #222B20;
+    --text: #ECF1EA;
+    --text-soft: #A6B8A8;
+    --rule: #2C3A2A;
+    --accent: #6FCF87;
+    --accent-soft: #22301F;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Sarabun', -apple-system, sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  header {
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 32px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 36px);
+    font-weight: 700;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--text-soft);
+    font-size: 15px;
+  }
+  section {
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+  }
+  p {
+    margin: 0 0 14px;
+    max-width: 68ch;
+  }
+  ul {
+    margin: 0 0 14px;
+    padding-left: 22px;
+  }
+  li {
+    margin-bottom: 8px;
+    max-width: 64ch;
+  }
+  strong { font-weight: 600; }
+  .callout {
+    background: var(--surface-alt);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 20px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .table-like {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 4px 0;
+    margin: 16px 0;
+  }
+  .row {
+    display: flex;
+    gap: 16px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .row:last-child { border-bottom: none; }
+  .row-label {
+    flex: 0 0 150px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-soft);
+  }
+  .row-value {
+    flex: 1;
+    font-size: 15px;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--text-soft);
+    font-size: 14px;
+  }
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .toc a {
+    font-size: 13px;
+    text-decoration: none;
+    background: var(--surface-alt);
+    color: var(--text-soft);
+    padding: 6px 12px;
+    border-radius: 100px;
+  }
+  .toc a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">นโยบายความเป็นส่วนตัว</div>
+    <h1>สอบใบขับขี่</h1>
+    <div class="meta">โดย Double O CodeWork Solution · ปรับปรุงล่าสุด 17 กันยายน 2569</div>
+    <nav class="toc">
+      <a href="#overview">1. ภาพรวม</a>
+      <a href="#data">2. ข้อมูลที่เก็บ</a>
+      <a href="#content">3. เนื้อหาข้อสอบและรูปภาพในแอป</a>
+      <a href="#ads">4. โฆษณา</a>
+      <a href="#payment">5. การชำระเงิน</a>
+      <a href="#not-do">6. สิ่งที่เราไม่ทำ</a>
+      <a href="#rights">7. สิทธิ์ของคุณ</a>
+      <a href="#children">8. เด็กและเยาวชน</a>
+      <a href="#changes">9. การเปลี่ยนแปลง</a>
+    </nav>
+  </header>
+
+  <section id="overview">
+    <h2>1. ภาพรวม</h2>
+    <p>
+      แอปพลิเคชัน "สอบใบขับขี่" พัฒนาโดย Double O CodeWork Solution เป็นแอป
+      จำลองสอบข้อเขียนใบอนุญาตขับรถแบบออฟไลน์ ครอบคลุมทั้งรถจักรยานยนต์
+      รถยนต์ และรถโดยสารสาธารณะในแอปเดียว ทำงานหลักทั้งหมดในเครื่องของคุณเอง
+      <strong>ไม่มีระบบสมัครสมาชิกหรือล็อกอิน</strong> และ<strong>ไม่มี
+      เซิร์ฟเวอร์กลางที่เก็บข้อมูลส่วนตัวของคุณไว้</strong> นโยบายนี้อธิบาย
+      ว่าเรารู้จักข้อมูลอะไรจากคุณบ้าง เก็บไว้ที่ไหน และใช้ทำอะไร
+    </p>
+  </section>
+
+  <section id="data">
+    <h2>2. ข้อมูลที่เก็บในเครื่องคุณเท่านั้น</h2>
+    <p>ข้อมูลทั้งหมดด้านล่างนี้ถูกเก็บไว้<strong>ในเครื่องของคุณเท่านั้น</strong> ไม่ถูกส่งออกไปที่ใดเลย:</p>
+    <div class="table-like">
+      <div class="row">
+        <div class="row-label">ชื่อเล่น</div>
+        <div class="row-value">ตั้งได้อิสระ ไม่ใช่ชื่อจริง ไม่ผูกกับตัวตนหรือบัญชีใดๆ</div>
+      </div>
+      <div class="row">
+        <div class="row-label">รูปโปรไฟล์</div>
+        <div class="row-value">ถ้าคุณเลือกอัพโหลดรูปจากเครื่อง แอปจะคัดลอกไฟล์นั้นเก็บไว้ในพื้นที่เก็บข้อมูลของแอปในเครื่องคุณเท่านั้น ไม่มีการอัพโหลดขึ้นที่ใดทั้งสิ้น</div>
+      </div>
+      <div class="row">
+        <div class="row-label">ประวัติการสอบ</div>
+        <div class="row-value">คะแนนและคำตอบจากทุกครั้งที่ทำข้อสอบ แยกตามประเภทรถที่เลือก เก็บไว้เพื่อให้คุณดูสถิติย้อนหลังและคำนวณจุดอ่อนที่ควรทบทวนให้เอง ประมวลผลในเครื่องคุณทั้งหมด</div>
+      </div>
+      <div class="row">
+        <div class="row-label">ข้อที่ปักธง</div>
+        <div class="row-value">ข้อที่คุณทำเครื่องหมายว่า "ไม่แน่ใจ" ระหว่างทำข้อสอบ</div>
+      </div>
+      <div class="row">
+        <div class="row-label">วันสอบจริง</div>
+        <div class="row-value">ถ้าตั้งค่าไว้ ใช้แสดงตัวนับถอยหลังในหน้าแรกเท่านั้น</div>
+      </div>
+      <div class="row">
+        <div class="row-label">สถิติการใช้งาน</div>
+        <div class="row-value">จำนวนวันที่เปิดแอปติดต่อกัน (streak), การตั้งค่าธีม/ขนาดตัวอักษร</div>
+      </div>
+    </div>
+    <p>
+      ข้อมูลทั้งหมดในหัวข้อนี้จะหายไปทันทีถ้าคุณลบแอป หรือกดปุ่ม
+      <strong>"ลบข้อมูลส่วนตัวทั้งหมด"</strong> ในหน้าตั้งค่าของแอป
+    </p>
+  </section>
+
+  <section id="content">
+    <h2>3. เนื้อหาข้อสอบและรูปภาพในแอป</h2>
+    <p>
+      แอปนี้ครอบคลุม 3 ประเภทรถ (รถจักรยานยนต์ รถยนต์ รถโดยสารสาธารณะ) แต่ละ
+      ประเภทแบ่งเป็นหมวดย่อยครบตามที่กรมการขนส่งทางบกใช้จริง เช่น กฎหมายจราจร
+      ป้ายบังคับ ป้ายเตือน สัญญาณ และการบำรุงรักษา รูปภาพประกอบคำถาม (เช่น
+      ภาพป้ายจราจร) เป็น<strong>ไฟล์ที่ฝังมากับตัวแอปตั้งแต่ติดตั้ง (Local
+      Assets)</strong> ไม่ใช่รูปที่โหลดจากอินเทอร์เน็ต จึงไม่มีการเก็บหรือ
+      ส่งข้อมูลใดๆ เพิ่มเติมจากการเปิดดูรูปภาพเหล่านี้เลย และสามารถใช้งานได้
+      แม้ไม่มีสัญญาณอินเทอร์เน็ต
+    </p>
+  </section>
+
+  <section id="ads">
+    <h2>4. ข้อมูลจากผู้ให้บริการโฆษณา (AdMob)</h2>
+    <p>
+      แอปนี้แสดงโฆษณาผ่าน <strong>Google AdMob</strong> สำหรับผู้ใช้ที่ยังไม่ได้ปลดล็อก
+      AdMob อาจเก็บ Advertising ID ของอุปกรณ์คุณและข้อมูลทางเทคนิคอื่นๆ ตามนโยบาย
+      ความเป็นส่วนตัวของ Google เพื่อแสดงโฆษณาที่เกี่ยวข้อง คุณสามารถจัดการการตั้งค่า
+      โฆษณาส่วนบุคคลได้ผ่านการตั้งค่าบัญชี Google ของคุณ
+    </p>
+    <div class="callout">
+      <p>
+        อ่านนโยบายความเป็นส่วนตัวของ Google ฉบับเต็มได้ที่
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="payment">
+    <h2>5. ข้อมูลจากผู้ให้บริการชำระเงิน</h2>
+    <p>
+      การซื้อ "ปลดล็อกทั้งหมด" ดำเนินการผ่านระบบของ <strong>Google Play</strong>
+      ทั้งหมด เราไม่เห็นและไม่เก็บข้อมูลบัตรเครดิตหรือข้อมูลการชำระเงินของคุณเลย
+      แอปเพียงตรวจสอบสถานะการซื้อผ่านระบบของ Google Play เพื่อปลดล็อกฟีเจอร์ให้
+    </p>
+  </section>
+
+  <section id="not-do">
+    <h2>6. เราไม่ทำอะไรกับข้อมูลคุณบ้าง</h2>
+    <ul>
+      <li>ไม่ขายหรือให้เช่าข้อมูลส่วนตัวของคุณแก่บุคคลที่สาม</li>
+      <li>ไม่ส่งข้อมูลประวัติการสอบ คะแนน หรือรูปโปรไฟล์ของคุณออกจากเครื่องไปที่ใดเลย</li>
+      <li>ไม่ติดตามพฤติกรรมคุณข้ามแอปอื่น นอกเหนือจากที่ SDK ของ AdMob ทำตามมาตรฐาน</li>
+      <li>ไม่บังคับให้สร้างบัญชีหรือเข้าสู่ระบบก่อนใช้งาน</li>
+    </ul>
+  </section>
+
+  <section id="rights">
+    <h2>7. สิทธิ์ของคุณ</h2>
+    <p>
+      เพราะข้อมูลทั้งหมดอยู่ในเครื่องคุณเอง คุณมีสิทธิ์เต็มที่ในการจัดการข้อมูลนี้:
+    </p>
+    <ul>
+      <li><strong>ลบข้อมูลทั้งหมด</strong> ได้ทันทีผ่านปุ่มในหน้าตั้งค่า &gt; นโยบายความเป็นส่วนตัว</li>
+      <li><strong>กู้คืนสถานะปลดล็อก</strong> ได้ผ่านปุ่ม "Restore Purchases" หากติดตั้งแอปใหม่</li>
+      <li><strong>ลบแอปทิ้ง</strong> เพื่อลบข้อมูลทั้งหมดออกจากเครื่องอย่างสมบูรณ์</li>
+    </ul>
+  </section>
+
+  <section id="children">
+    <h2>8. เด็กและเยาวชน</h2>
+    <p>
+      แอปนี้ออกแบบมาสำหรับผู้ที่เตรียมสอบขอรับใบอนุญาตขับรถ ซึ่งตามกฎหมายไทย
+      ต้องมีอายุตั้งแต่ 15 ปีขึ้นไป (รถจักรยานยนต์) หรือ 18 ปีขึ้นไป (รถยนต์/
+      รถสาธารณะ) เราไม่ได้มุ่งเป้าหมายการใช้งานไปที่เด็กอายุต่ำกว่า 13 ปี
+      และไม่เก็บข้อมูลส่วนบุคคลจากเด็กโดยเจตนา
+    </p>
+  </section>
+
+  <section id="changes">
+    <h2>9. การเปลี่ยนแปลงนโยบาย</h2>
+    <p>
+      เราอาจปรับปรุงนโยบายนี้เป็นครั้งคราวเพื่อให้สอดคล้องกับฟีเจอร์ใหม่หรือ
+      ข้อกำหนดทางกฎหมาย การเปลี่ยนแปลงที่สำคัญจะแจ้งให้ทราบผ่านหน้าแรกของแอป
+      วันที่ปรับปรุงล่าสุดจะแสดงไว้ที่ด้านบนของหน้านี้เสมอ
+    </p>
+  </section>
+
+  <footer>
+    มีคำถามเกี่ยวกับความเป็นส่วนตัว? ติดต่อทีมพัฒนา Double O CodeWork Solution
+  </footer>
+
+</div>
+</body>
+</html>
