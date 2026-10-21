@@ -11,7 +11,7 @@
   <header>
     <div class="app-name">RaiNa : Thai Farm Story</div>
     <h1>นโยบายความเป็นส่วนตัว</h1>
-    <p class="updated">ปรับปรุงล่าสุด: 20 ตุลาคม 2569 · <a href="#en">English below</a></p>
+    <p class="updated">ปรับปรุงล่าสุด: 21 ตุลาคม 2569 · <a href="#en">English below</a></p>
   </header>
 
   <p>นโยบายนี้อธิบายว่า Double O CodeWork Solution ("เรา") เก็บข้อมูลอะไรเมื่อคุณเล่นเกม RaiNa : Thai Farm Story ("เกม") บน iOS และ Android เก็บไปเพื่ออะไร และคุณเลือกอะไรได้บ้าง ติดต่อเราได้ที่ <a href="mailto:cyberdie007@gmail.com">cyberdie007@gmail.com</a></p>
@@ -25,8 +25,10 @@
     <li><b>หลักฐานการซื้อ</b> - ใบเสร็จการซื้อในแอพจาก App Store หรือ Google Play เพื่อตรวจว่าการซื้อถูกต้องก่อนให้ของ เราไม่ได้รับข้อมูลบัตรหรือบัญชีธนาคารของคุณ</li>
     <li><b>ข้อมูลโฆษณา</b> (เฉพาะตอนแสดงโฆษณา) - รหัสโฆษณาของเครื่อง ตำแหน่งโดยประมาณจาก IP ข้อมูลเครื่องและแอพ และการโต้ตอบกับโฆษณา เก็บโดยผู้ให้บริการโฆษณาของเรา</li>
     <li><b>ข้อมูลทางเทคนิค</b> - เวอร์ชันแอพ รุ่นเครื่อง ระบบปฏิบัติการ และเวลาที่ส่งคำขอ ใช้เพื่อดูแลระบบและแก้ปัญหา</li>
+    <li><b>บันทึกการเล่น (log)</b> - server บันทึกการเปลี่ยนแปลงในฟาร์มแต่ละครั้ง (เช่น ปลูก ขาย ซื้อ สุ่ม รับรางวัล) พร้อมจำนวน Gold และ Diamond ก่อนและหลัง และเก็บสำเนาฟาร์มวันละ 1 ครั้ง ใช้เพื่อตอบคำถามและกู้ฟาร์มเมื่อคุณติดต่อฝ่ายช่วยเหลือ ตรวจสอบการซื้อ และป้องกันการโกง</li>
+    <li><b>รายงานข้อผิดพลาด</b> - เมื่อแอพเกิดข้อผิดพลาด แอพจะส่งข้อความข้อผิดพลาด เวอร์ชันแอพ และรุ่นเครื่องมาที่ server ของเรา เพื่อใช้แก้บั๊ก ไม่มีข้อมูลส่วนตัวอื่นในรายงาน</li>
   </ul>
-  <p>เกมไม่ได้ใช้บริการ analytics หรือ crash reporting แยกต่างหาก และเราไม่ขายข้อมูลส่วนบุคคลของคุณ</p>
+  <p>เกมไม่ได้ใช้บริการ analytics หรือ crash reporting ของบริษัทอื่น และเราไม่ขายข้อมูลส่วนบุคคลของคุณ การแจ้งเตือนในเครื่อง (เช่น พืชสุก) ตั้งเวลาบนเครื่องของคุณเอง ไม่ได้ส่งข้อมูลออกไป และปิดได้ในหน้าตั้งค่า</p>
 
   <h2>2. ผู้ให้บริการที่เราใช้</h2>
   <ul>
@@ -39,7 +41,14 @@
   <p>ผู้เล่นในประเทศที่กฎหมายกำหนด (เช่น สหภาพยุโรปและสหราชอาณาจักร) จะถูกถามความยินยอมก่อนแสดงโฆษณาแบบเฉพาะบุคคล และเปลี่ยนได้ทุกเมื่อที่ ตั้งค่า → Privacy → Ad privacy options บน iOS เกมจะขออนุญาตก่อนใช้รหัสโฆษณา (App Tracking Transparency) คุณยังจำกัดการติดตามโฆษณาได้ในการตั้งค่าของเครื่อง โฆษณาแบบดูเพื่อรับรางวัลเป็นทางเลือกเสมอ และเกมไม่มีโฆษณาแบบแบนเนอร์</p>
 
   <h2>4. ระยะเวลาเก็บข้อมูล</h2>
-  <p>เราเก็บบัญชีและฟาร์มของคุณตราบที่บัญชียังอยู่ เมื่อลบบัญชี ข้อมูลบัญชีและฟาร์มจะถูกลบจาก server ยกเว้นข้อมูลที่กฎหมายกำหนดให้เก็บ (เช่น หลักฐานการซื้อเพื่อภาษี) ซึ่งเก็บไว้เท่าที่กฎหมายกำหนดเท่านั้น</p>
+  <p>เราเก็บบัญชีและฟาร์มของคุณตราบที่บัญชียังอยู่ ข้อมูลบางประเภทลบอัตโนมัติตามเวลา:</p>
+  <ul>
+    <li>บันทึกการเล่นทั่วไป (ปลูก รดน้ำ ขาย วางของ) - 3 วัน</li>
+    <li>บันทึกเกี่ยวกับ Diamond การซื้อ การสุ่ม และรางวัล - 90 วัน</li>
+    <li>สำเนาฟาร์มรายวัน - 30 วัน</li>
+    <li>รายงานข้อผิดพลาดของแอพ - 30 วัน</li>
+  </ul>
+  <p>เมื่อลบบัญชี ข้อมูลบัญชีและฟาร์มจะถูกลบจาก server ยกเว้นข้อมูลที่กฎหมายกำหนดให้เก็บ (เช่น หลักฐานการซื้อเพื่อภาษี) ซึ่งเก็บไว้เท่าที่กฎหมายกำหนดเท่านั้น</p>
 
   <h2>5. การลบบัญชี</h2>
   <p>ในเกมไปที่ ตั้งค่า → Delete my account ระบบจะลบบัญชี ฟาร์ม Diamond และของที่ซื้อไว้ทั้งหมดอย่างถาวร หรือส่งอีเมลถึง <a href="mailto:cyberdie007@gmail.com">cyberdie007@gmail.com</a> จากอีเมลที่ผูกกับบัญชี</p>
@@ -62,7 +71,7 @@
   <hr id="en">
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 20 October 2026</p>
+  <p class="updated">Last updated: 21 October 2026</p>
   <p>This policy explains what information Double O CodeWork Solution ("we") collects when you play RaiNa : Thai Farm Story (the "Game") on iOS or Android, why, and the choices you have. Contact: <a href="mailto:cyberdie007@gmail.com">cyberdie007@gmail.com</a>.</p>
 
   <h2>1. What we collect</h2>
@@ -74,8 +83,10 @@
     <li><b>Purchase records</b> - the App Store or Google Play receipt, to confirm a purchase before giving the items. We never receive your card or bank details.</li>
     <li><b>Advertising data</b> (only when ads are shown) - device advertising ID, approximate location from IP address, device and app information and ad interactions, collected by our ad partners.</li>
     <li><b>Technical data</b> - app version, device model, operating system and request times, to keep the service running and fix problems.</li>
+    <li><b>Activity logs</b> - our server records each change to your farm (such as planting, selling, buying, draws and rewards) with your Gold and Diamonds before and after, and keeps one copy of your farm per day, to answer support requests and restore farms, check purchases and prevent cheating.</li>
+    <li><b>Error reports</b> - when the app hits an error it sends the error text, app version and device model to our server so we can fix bugs. No other personal data is in these reports.</li>
   </ul>
-  <p>The Game does not use separate analytics or crash-reporting services. We do not sell your personal information.</p>
+  <p>The Game does not use third-party analytics or crash-reporting services. We do not sell your personal information. Reminders (for example "your crops are ripe") are scheduled on your own device, send no data, and can be turned off in Settings.</p>
 
   <h2>2. Service providers</h2>
   <ul>
@@ -88,7 +99,14 @@
   <p>Where required (for example in the EU and UK) you are asked for consent before personalised ads are shown, and can change it at any time in Settings → Privacy → Ad privacy options. On iOS the Game asks before using the advertising identifier (App Tracking Transparency). You can also limit ad tracking in your device settings. Rewarded ads are always optional, and the Game never shows banner ads.</p>
 
   <h2>4. How long we keep data</h2>
-  <p>We keep your account and farm while your account exists. When you delete your account, your account and farm data are removed from our servers, except records the law requires us to keep (such as purchase records for tax), kept only as long as required.</p>
+  <p>We keep your account and farm while your account exists. Some data is deleted automatically:</p>
+  <ul>
+    <li>Everyday activity logs (planting, watering, selling, placing items) - 3 days</li>
+    <li>Logs of Diamonds, purchases, draws and rewards - 90 days</li>
+    <li>Daily farm copies - 30 days</li>
+    <li>App error reports - 30 days</li>
+  </ul>
+  <p>When you delete your account, your account and farm data are removed from our servers, except records the law requires us to keep (such as purchase records for tax), kept only as long as required.</p>
 
   <h2>5. Deleting your account</h2>
   <p>In the Game open Settings → Delete my account. This permanently deletes your account, farm, Diamonds and purchases. You can also email <a href="mailto:cyberdie007@gmail.com">cyberdie007@gmail.com</a> from the email linked to your account.</p>
